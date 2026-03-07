@@ -1,5 +1,5 @@
 package com.url.shortener.model;
-
+import java.util.*;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.web.bind.annotation.Mapping;
@@ -18,7 +18,7 @@ public class UrlMapping {
     private LocalDateTime createdDate;
 
     @ManyToOne
-    @JoinColumn(name = "User_Id")
+    @JoinColumn(name = "user_Id")
     private User user;
 
     @OneToMany(mappedBy = "urlMapping")
