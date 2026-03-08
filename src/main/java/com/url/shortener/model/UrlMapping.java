@@ -17,10 +17,12 @@ public class UrlMapping {
     private int clickCount=0;
     private LocalDateTime createdDate;
 
+
     @ManyToOne
     @JoinColumn(name = "user_Id")
     private User user;
 
     @OneToMany(mappedBy = "urlMapping")
     private List<ClickEvent> clickEvents;
+
 }
